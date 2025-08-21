@@ -13,7 +13,10 @@
   "scripts": {
     "dev": "ts-node index.ts",
     "start": "node dist/index.js",
-    "build": "npm install && tsc"
+    "start:prod": "npm run build && npm start",
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.6",
